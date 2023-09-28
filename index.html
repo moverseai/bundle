@@ -6,7 +6,8 @@
         content="BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos">
   <meta name="keywords" content="Moverse, AI, Motion Capture, MoCap, SMPL, SMPL-X, Body Fitting, Body Estimation, Pose Estimation, Multiview System">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos</title>
+  <title>MoCatalyst: Accelerating and Automating MoCap</title>
+  <!-- <title>BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos</title> -->
 
   <!-- Global site tag (gtag.js) - Google Analytics
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXX"></script>
@@ -90,7 +91,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos</h1>
+          <h1 class="title is-1 publication-title">MoCatalyst: Accelerating and Automating MoCap</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
                 <a href="https://tzole1155.github.io/">Georgos Albanis</a><sup>1, 2</sup>,</span>
@@ -211,196 +212,95 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-             Capturing smooth motions from videos using markerless techniques typically involves complex processes such as temporal constraints,
-             multiple stages with data-driven regression a nd optimization, and bundle solving over temporal windows. 
-             These processes can be inefficient and require tuning multiple objectives across stages. 
-             In contrast, BundleMoCap introduces a novel and efficient approach to this problem. 
-             It solves the motion capture task in a single stage, eliminating the need for temporal smoothness objectives while still delivering smooth motions. 
-             BundleMoCap outperforms the state-of-the-art without increasing complexity. 
-             The key concept behind BundleMoCap is manifold interpolation between latent keyframes. 
-             By relying on a local manifold smoothness assumption, we can efficiently solve a bundle of frames using a single code. 
-             Additionally, the method can be implemented as a sliding window optimization and requires only the first frame to be properly initialized, reducing the overall computational burden.
-              BundleMoCap's strength lies in its ability to achieve high-quality motion capture results with simplicity and efficiency.
+            We present a novel solution that alleviates the issues associated with the arduous
+            post-processing of raw motion data, involving the rectification of errors such as
+            missing, mislabeled, or occluded markers. Such challenges are exacerbated when
+            utilizing low-cost sensing devices, where such errors are amplified. To that end,
+            we introduce a real-time and artefact-free MoCap-solving data-driven model, which
+            combined with an innovative noise-aware temporal fitting method, enables high-quality
+            MoCap even when using a sparse set of low-cost sensors. Importantly, our fitting 
+            method can process any raw motion data, regardless of the capturing method, including
+            both optical and inertial. This means it is not limited to specific sensor types and
+            can handle a wide range of data sources. Our data-driven model can simultaneously 
+            denoise, solve, and hallucinate the raw unstructured point cloud, while our fitting 
+            approach models the uncertainty region of measurements and refines the real-time
+            MoCap data by optimizing within a temporal window. This results in more accurate 
+            outcomes and ensures temporal coherence, preventing common failures and induced artefacts.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-  <!-- <section class="hero teaser">
-    <div class="hero-body">
-      <div class="container has-text-centered is-max-desktop">    
-          <img width=100% src="./static/images/model.png" class="center">
-          <h2 class="subtitle has-text-centered">
-            Training overview of our <span class="ours">real-time landmark solving</span> model.
-          </h2>
-      </div>
-  </div>
-</section> -->
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+<!-- Paper video. -->
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/XXXXXXXXXX?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/62ncJL4D0Cw?si=LF_LtEGGARIcrO8q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
-    </div> -->
-    <!--/ Paper video. -->
+    </div>
   </div>
 </section>
+<!--/ Paper video. -->
 
-
-<!-- <section class="hero teaser">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h2 class="title is-3">MoCatalyst:</h2>
-          <p>
-            <span class="ours">Ours</span> ...
-          </p>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-hero1">
-          <img width=100% src="./static/images/xx.jpg" class="center">
-        </div>
-        <div class="item item-hero2">
-          <img width=100% src="./static/images/xx.jpg" class="center">
-        </div>        
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<!-- <section class="hero teaser">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h2 class="title is-3">Noise-aware Solving</h2>
-            <p>
-              <span class="ours">Ours</span> ...
-            </p>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-hero1">
-          <img width=100% src="./static/images/xx.jpg" class="center">
-        </div>
-        <div class="item item-hero2">
-          <img width=100% src="./static/images/xx.jpg" class="center">
-        </div>        
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<!--
-<section class="section"> 
-    <div class="container is-centered has-text-centered">      
-        <h2 class="title is-3">Playback</h2>
-
-        <h3 class="title is-4">Process visualization</h3>
-        <div class="content has-text-justified">
-          <p>
-            process visualization
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/start.jpg"
-                 class="interpolation-image"
-                 alt="start image."/>
-            <p>Start</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/end.jpg"
-                 class="interpolation-image"
-                 alt="end image."/>
-            <p class="is-bold">End</p>
-          </div>
-        </div>
-        <br/>
-
-        <!!-- <h3 class="title is-4">Placeholder Video</h3>
-        <div class="content has-text-justified">
-          <p>
-            placeholder
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/XXXXX.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-    </div>-->
-    <!--/ ???. -->
-
-
-    
+<!-- Flow. -->
 <section class="section">
-    <div class="container is-centered has-text-centered is-max-desktop">
-      <table>
-        <td>
-          <div class="b-dics" style="width: 300px">
-            <img src="./static/images/xx.jpg" alt="Uncertainty">
-            <img src="./static/images/xx.jpg" alt="Traditional">
-          </div>
-        </td>
-        <td>
-          <div class="b-dics" style="width: 300px">
-            <img src="./static/images/xx.jpg" alt="Uncertainty">
-            <img src="./static/images/xx.jpg" alt="Traditional">
-          </div>
-        </td>
-        <td>
-          <div class="b-dics" style="width: 300px">
-            <img src="./static/images/xx.jpg" alt="Uncertainty">
-            <img src="./static/images/xx.jpg" alt="Traditional">
-          </div>
-        </td>
-        
-      </table>
-  </div>
-</section>
-
-    <!-- References. -->
-    <!-- <div class="container is-centered">
-        <h2 class="title is-3">References</h2>
-
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <h3 class="title is-3">Our Demo Flow</h3>
         <div class="content has-text-justified">
           <p>
-            <a href="">BalancedMSE</a>: ...
-          </p>
-          <p>
-            <a href="">MoCap-Solver</a>: ...
-          </p>
-          <p>
-            <a href="">SOMA</a>: ...
+            The demo consists of 4 distinct step, although highlighting the automatic
+            post-processing technology for smoothing and refining the captured data: a)
+            capture the user's movement with camera sensors, b) estimate user's body pose
+            in real-time (check <a href="https://moverseai.github.io/noise-tail/">here</a> how),
+            c) refine the initial pose estimation with our temporal fitting approach, and d)
+            visualize the initial estimation and the refined result. The fitting and visualization
+            steps are conducted offline with minimal processing time.
           </p>
         </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
+        <div class="container has-text-centered is-max-desktop">    
+            <img width=100% src="./static/images/demo-flow.png" class="center">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+<!--/ Flow. -->
 
+<!-- Flow. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <h3 class="title is-3">Where To Find Us!</h3>
+        <!-- <div class="content has-text-justified">
+        </div> -->
+        <div class="container has-text-centered is-max-desktop">    
+            <img width=100% src="./static/images/demo-program.png" class="center">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Flow. -->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>Add citation</code></pre>
+    <pre><code>@inproceedings{albanis2023bundle,
+      author    = {Albanis, Georgios, and Zioulis, Nikolaos, and Thermos, Spyridon, and Chatzitofis, Anargyros and Kolomvatsos, Kostas.},
+      title     = {MoCatalyst: Accelerating and Automating MoCap},
+      booktitle = {IEEE/CVF International Conference on Computer Vision (ICCV) Demo},
+      url       = {https://moverseai.github.io/bundle/},
+      month     = {October},
+      year      = {2023}  
+    }</code></pre>
   </div>
 </section>
 
