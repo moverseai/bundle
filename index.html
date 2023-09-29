@@ -91,6 +91,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
+          <img width=8% src="./static/images/mov_icon.png" class="center">
+          <br><br>
           <h1 class="title is-1 publication-title">MoCatalyst: Accelerating and Automating MoCap</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -113,7 +115,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://openaccess.thecvf.com/content/ICCV2023W/WORKSHOP/papers/XXXX_paper.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -139,10 +141,10 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>                                                                   
+              </span>                                                                    -->
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=XXXXXX"
+                <a href="https://youtu.be/X9QLlEbKKnQ?si=mMhfhY_zcsPsrH65"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -179,67 +181,38 @@
 </section>
 
 <section class="hero teaser">
-  <!-- <div class="hero-body"> -->
-    <!-- <div class="hero-body"> -->
-        <div class="container has-text-centered is-max-desktop">    
-            <img width=80% src="./static/images/teaser.png" class="center">
-            <!-- <h2 class="subtitle has-text-centered">
-              <span class="ours">Our</span> framework.
-            </h2> -->
-        <!-- </div> -->
-    <!-- </div> -->
-    <!-- <div class="container">
-      <h2 class="subtitle has-text-centered">
-        <span class="ours">Ours</span> ...
-      </h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-hero1">
-          <img width=100% src="./static/images/xx.png" class="center">
-        </div>
-        <div class="item item-hero2">
-          <img width=100% src="./static/images/xx.jpg" class="center">
-        </div>        
-      </div>
-    </div>
-  </div> -->
+  <div class="container has-text-centered is-max-desktop">    
+      <img width=80% src="./static/images/teaser.png" class="center">
+  </div>
 </section>
 
+<!-- Motivation. -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Motivation</h2>
         <div class="content has-text-justified">
           <p>
-            We present a novel solution that alleviates the issues associated with the arduous
-            post-processing of raw motion data, involving the rectification of errors such as
-            missing, mislabeled, or occluded markers. Such challenges are exacerbated when
-            utilizing low-cost sensing devices, where such errors are amplified. To that end,
-            we introduce a real-time and artefact-free MoCap-solving data-driven model, which
-            combined with an innovative noise-aware temporal fitting method, enables high-quality
-            MoCap even when using a sparse set of low-cost sensors. Importantly, our fitting 
-            method can process any raw motion data, regardless of the capturing method, including
-            both optical and inertial. This means it is not limited to specific sensor types and
-            can handle a wide range of data sources. Our data-driven model can simultaneously 
-            denoise, solve, and hallucinate the raw unstructured point cloud, while our fitting 
-            approach models the uncertainty region of measurements and refines the real-time
-            MoCap data by optimizing within a temporal window. This results in more accurate 
-            outcomes and ensures temporal coherence, preventing common failures and induced artefacts.
+            Raw MoCap data need post-processing even when captured with high-end systems.
+            This process usually involves one or more animators, it is tedious and time-consuming.
+            Further, the advent of AI-powered MoCap enables capturing with more generic and lower-cost cameras,
+            introducing additional noise to the captured data, making the need for automatic post-processing
+            more imminent. 
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+<!--/ Motivation. -->
 
 <!-- Paper video. -->
 <section>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <!-- <h2 class="title is-3">Video</h2> -->
         <div class="publication-video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/62ncJL4D0Cw?si=LF_LtEGGARIcrO8q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="1280" height="720" src="https://www.youtube.com/embed/X9QLlEbKKnQ" title="Moverse @ICCV2023  | Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -247,28 +220,46 @@
 </section>
 <!--/ Paper video. -->
 
+
 <!-- Flow. -->
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
       <div class="column is-centered has-text-centered">
-        <h3 class="title is-3">Our Demo Flow</h3>
+        <h2 class="title is-3">Demo Summary</h2>
+      <div class="content has-text-justified">
+        <p>
+          We present a novel solution that alleviates the issues associated with the arduous
+          post-processing of raw motion data, involving the rectification of errors such as
+          missing, mislabeled, or occluded markers. Such challenges are exacerbated when
+          utilizing low-cost sensing devices, where such errors are amplified. To that end,
+          we introduce a real-time and artefact-free MoCap-solving data-driven model, which
+          combined with an innovative noise-aware temporal fitting method, enables high-quality
+          MoCap even when using a sparse set of low-cost sensors. Our fitting method can process
+          any raw motion data, regardless of the capturing method, including
+          both optical and inertial. This means it is not limited to specific sensor types and
+          can handle a wide range of data sources. Our data-driven model can simultaneously 
+          denoise, solve, and hallucinate the raw unstructured point cloud, while our fitting 
+          approach models the uncertainty region of measurements and refines the real-time
+          MoCap data by optimizing within a temporal window. This results in more accurate 
+          outcomes and ensures temporal coherence, preventing common failures and induced artefacts.
+        </p>
+      </div>
+        <h2 class="title is-3">Demo Setup</h2>
         <div class="content has-text-justified">
           <p>
             The demo consists of 4 distinct step, although highlighting the automatic
             post-processing technology for smoothing and refining the captured data: a)
             capture the user's movement with camera sensors, b) estimate user's body pose
             in real-time (check <a href="https://moverseai.github.io/noise-tail/">here</a> how),
-            c) refine the initial pose estimation with our temporal fitting approach, and d)
-            visualize the initial estimation and the refined result. The fitting and visualization
-            steps are conducted offline with minimal processing time.
+            c) refine the initial estimation by fitting an <a href="https://smpl.is.tue.mpg.de/">articulated template mesh</a> to
+            3D landmarks, and d) Visualize the comparison between the fitted meshes of the real-time vs postprocessed
+            results, their 3D skeleton reprojections, and joints angles.
           </p>
         </div>
         <div class="container has-text-centered is-max-desktop">    
             <img width=100% src="./static/images/demo-flow.png" class="center">
         </div>
       </div>
-    </div>
   </div>
 </section>
 <!--/ Flow. -->
