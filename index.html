@@ -6,8 +6,8 @@
         content="BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos">
   <meta name="keywords" content="Moverse, AI, Motion Capture, MoCap, SMPL, SMPL-X, Body Fitting, Body Estimation, Pose Estimation, Multiview System">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MoCatalyst: Accelerating and Automating MoCap</title>
-  <!-- <title>BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos</title> -->
+  <!-- <title>MoCatalyst: Accelerating and Automating MoCap</title> -->
+  <title>BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXX"></script>
@@ -42,6 +42,8 @@
 
   <link rel="stylesheet" href="./static/css/dics.css">
   <script src="./static/js/dics.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -85,7 +87,6 @@
   </div>
 </nav>
 
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -93,7 +94,153 @@
         <div class="column has-text-centered">
           <img width=8% src="./static/images/mov_icon.png" class="center">
           <br><br>
+          <h1 class="title is-1 publication-title">BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://tzole1155.github.io/">Georgos Albanis</a><sup>1, 2</sup>,</span>
+            <span class="author-block">
+                <a href="https://zokin.github.io">Nikolaos Zioulis</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="http://kostasks.users.uth.gr/index.html">Kostas Kolomvatsos</a><sup>2</sup>,</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup><a href="https://www.moverse.ai">Moverse</a>,</span>
+            <span class="author-block"><sup>2</sup><a href="https://iprism.eu/">University of Thessaly</a></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/ICCV2023W/WORKSHOP/papers/XXXX_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/ICCV2023W/WORKSHOP/supplemental/XXXX_supplemental.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supplementary</span>
+                </a>
+              </span>  
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/23XX.XXXXX.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>                                                                    -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://youtu.be/X9QLlEbKKnQ?si=mMhfhY_zcsPsrH65"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/moverseai/noise-tail"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/moverseai/noise-tail"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container has-text-centered is-max-desktop">    
+      <img width=80% src="./static/images/teaser.png" class="center">
+  </div>
+</section>
+
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Capturing smooth motions from videos using markerless techniques typically involves complex processes such as temporal constraints, multiple stages with data-driven regression and optimization, and bundle solving over temporal windows.
+            These processes can be inefficient and require tuning multiple objectives across stages.
+            In contrast, <span class="ours">BundleMoCap</span> introduces a novel and efficient approach to this problem. It solves the motion capture task in a single stage, eliminating the need for temporal smoothness objectives while still delivering smooth motions. 
+            <span class="ours">BundleMoCap</span> outperforms the state-of-the-art without increasing complexity.
+            The key concept behind <span class="ours">BundleMoCap</span> is manifold interpolation between latent keyframes. 
+            By relying on a local manifold smoothness assumption, we can efficiently solve a bundle of frames using a single code. 
+            Additionally, the method can be implemented as a sliding window optimization and requires only the first frame to be properly initialized, reducing the overall computational burden.
+            <span class="ours">BundleMoCap's</span> strength lies in its ability to achieve high-quality motion capture results with simplicity and efficiency.
+          </p>
+        </div>
+      </div>
+    </div>
+<!--/ Abstract. -->
+
+<!-- Flow. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <h3 class="title is-3">Overview</h3>
+        <!-- <div class="content has-text-justified">
+        </div> -->
+        <div class="container has-text-centered is-max-desktop">    
+            <img width=100% src="./static/images/bundle_mocap.png" class="center">
+        </div>
+        <p>
+          <span class="ours">BundleMoCap</span> fits an articulated template mesh to 2D keypoint observations from a sparse set of multi-view videos.          
+          Instead of iteratively optimizing pose parameters for each frame, we focus on optimizing the latent code \(z^t\) corresponding to the pose parameters \(\theta^t = \mathcal{G}(z^t)\) for a single keyframe (\(t^i=T\)).           
+          This relies on the reconstruction of the poses, root orientation and translation via interpolation, generating the intermediate frames (visually indicated by the blending between the start and end keyframes). 
+          A sliding window optimization implementation is used where only the first frame is fit in a standalone manner.           
+          Then, the \(i\text{th}\) temporal window \(\mathcal{T}^i\) that is solved as a bundle, optimizes only the next latent keyframe (\(t^i=T\)), while reconstructing the frames between the previously optimized keyframe (\(t^i=0\)) and the next.
+          All reconstructed frames are constrained by the respective multi-view keypoint constraints via \(\mathcal{E}^\mathcal{T}_{data}\) while the latent keyframe is regularized by \(\mathcal{E}^\mathcal{T}_{prior}\).
+          <span class="ours">BundleMoCap</span> requires just a single stage to achieve comparable results with the state-of-the-art without pose initialisation for each frame and delivers smooth motions efficiently without using any motion smoothness objective.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Flow. -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <img width=8% src="./static/images/mov_icon.png" class="center"> -->
+          <br><br>
           <h1 class="title is-1 publication-title">MoCatalyst: Accelerating and Automating MoCap</h1>
+          <h4 class="title is-5 publication-title"><it>[Demonstration of BundleMoCap as a neural inverse kinematics solver to 3D landmark constraints]</it></h4>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
                 <a href="https://tzole1155.github.io/">Georgos Albanis</a><sup>1, 2</sup>,</span>
@@ -180,11 +327,6 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container has-text-centered is-max-desktop">    
-      <img width=80% src="./static/images/teaser.png" class="center">
-  </div>
-</section>
 
 <!-- Motivation. -->
 <section class="section">
@@ -284,6 +426,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{albanis2023bundle,
+      author    = {Albanis, Georgios, and Zioulis, Nikolaos, and Kolomvatsos, Kostas.},
+      title     = {BundleMoCap: Efficient, Robust and Smooth Motion Capture from Sparse Multiview Videos},
+      booktitle = {20th ACM SIGGRAPH European Conference on Visual Media Production (CVMP) 2023},
+      url       = {https://moverseai.github.io/bundle/},
+      month     = {December},
+      year      = {2023}  
+    }</code></pre>
     <pre><code>@inproceedings{albanis2023bundle,
       author    = {Albanis, Georgios, and Zioulis, Nikolaos, and Thermos, Spyridon, and Chatzitofis, Anargyros and Kolomvatsos, Kostas.},
       title     = {MoCatalyst: Accelerating and Automating MoCap},
