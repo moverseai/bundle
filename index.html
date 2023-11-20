@@ -267,28 +267,39 @@
 <!-- Comparison. -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- columns is-full-width -->
-    <div class="columns is-centered">
-      <div class="column is-centered has-text-centered">
-        <h3 class="title is-3">Comparison</h3>
-        <p>
+      <!-- columns is-full-width -->
+      <div class="columns is-centered">
+        <div class="column is-centered has-text-centered">
+          <h3 class="title is-3">Comparison</h3>
+          <p>
           <b>Comparison with different architectures.</b>
-          This video presents a comparative analysis of various multi-view fitting methods in the domain of motion capture.
-           Our study begins with a standard multi-view fitting as a baseline, then advances to explore more sophisticated techniques such as <a href="#MuVS">MuVS <b>[1]</b></a>,
+            This video presents a comparative analysis of various multi-view methods on <a href="http://vision.imar.ro/human3.6m/description.php">Human3.6M</a> dataset on various actions.
+            Our study begins with a standard multi-view fitting as a baseline <a href="#MuVS">MuVS <b>[1]</b></a>, then advances to explore more sophisticated techniques such as
             <a href="#DCT">DCT <b>[2]</b></a>, 
             <a href="#ETC">ETC <b>[3]</b></a>, 
             <a href="#DMMR">DMMR <b>[4]</b></a>, 
             and <a href="#SLAHMR">SLAHMR <b>[5]</b></a>.
-             We integrate data-driven priors like <a href="#VPoser">VPoser <b>[6]</b></a> and <a href="#HuMoR">HuMoR <b>[7]</b></a> to refine motion capture precision beyond traditional methods.
-        </p>
-        <video muted="" loop="" playsinline="" controls="" width="100%">
-          <source src="./static/videos/sitting_down.mp4" type="video/mp4">
-      </video>
+             <!-- integrate data-driven priors like <a href="#VPoser">VPoser <b>[6]</b></a> and <a href="#HuMoR">HuMoR <b>[7]</b></a> to refine motion capture precision beyond traditional methods. -->
+          </p>
+          <video muted="" loop="" playsinline="" controls="" width="100%">
+            <source src="./static/videos/sitting_down.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
-
   </div>
-
+  <div class="container is-max-desktop">
+    <!-- columns is-full-width -->
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <h3 class="title is-3">Perfomance vs Efficiency</h3>
+        <p>
+        A visual summary of the performance (horizontal and vertices axes) and efficiency (runtime illustrated as the size of each point) of different methods. 
+        BundleMoCap’s competitive results are achieved with a minimal computational burden, without the need for 3D initialization, or a smoothness objective. 
+        Its efficiency is greatly boosted from its single-stage nature, making it an more appropriate choice for practical applications.
+        <img width=100% src="./static/images/efficiency.png" class="center">
+    </div>
+  </div>
+</div>
 </section>
 <!--/ Comparison. -->
 <!-- BibTeX. -->
@@ -299,19 +310,40 @@
         <h2 class="title is-3">References</h2>
         <ol>
           <li>
-            <a href="https://ieeexplore.ieee.org/document/8374596" id="MuVS">
+            <a href="https://smpl-x.is.tue.mpg.de/" id="MuVS">
+            Georgios Pavlakos, Vasileios Choutas, Nima Ghorbani, Timo Bolkart, Ahmed A. A. Osman, Dimitrios Tzionas and Michael J. Black. Expressive Body Capture: 3D Hands, Face, and Body from a Single Image. In 2019 Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR).
+          </a>
+          </li>
+          <li>
+            <a href="https://ieeexplore.ieee.org/document/8374596" id="DCT">
             Yinghao Huang, Federica Bogo, Christoph Lassner, Angjoo Kanazawa, Peter V Gehler,
             Javier Romero, Ijaz Akhter, and Michael J Black. 2017. Towards accurate markerless
             human shape and pose estimation over time. In 2017 international conference on 3D
             vision (3DV). IEEE, 421–430.
           </a>
           </li>
-          <li id="DCT">[Reference for DCT]</li>
-          <li id="ETC">[Reference for ETC]</li>
-          <li id="DMMR">[Reference for DMMR]</li>
-          <li id="SLAHMR">[Reference for SLAHMR]</li>
-          <li id="VPoser">[Reference for VPoser]</li>
-          <li id="HuMoR">[Reference for HuMoR]</li>
+          <li>
+            <a href="https://arxiv.org/abs/1905.04266" id="ETC">
+              Anurag Arnab, Carl Doersch, and Andrew Zisserman. 2019. Exploiting temporal
+              context for 3D human pose estimation in the wild. In Proceedings of the IEEE/CVF
+              Conference on Computer Vision and Pattern Recognition. 3395–3404
+            </a>
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2110.10355" id="DMMR">
+              Buzhen Huang, Yuan Shu, Tianshu Zhang, and Yangang Wang. 2021. Dynamic multiperson mesh recovery from uncalibrated multi-view cameras. In 2021 International
+              Conference on 3D Vision (3DV). IEEE, 710–720.
+            </a>
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2302.12827" id="SLAHMR">
+              Vickie Ye, Georgios Pavlakos, Jitendra Malik, and Angjoo Kanazawa. 2023. Decoupling
+              human and camera motion from videos in the wild. In Proceedings of the IEEE/CVF
+              Conference on Computer Vision and Pattern Recognition. 21222–21232.
+            </a>
+          </li>
+          <!-- <li id="VPoser">[Reference for VPoser]</li>
+          <li id="HuMoR">[Reference for HuMoR]</li> -->
         </ol>
       </div>
     </div>
