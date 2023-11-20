@@ -238,19 +238,87 @@
     <div class="columns is-centered">
       <div class="column is-centered has-text-centered">
         <h3 class="title is-3">Results</h3>
-        <div>
+        <!-- <div>
           <iframe src="./static/rerun/results_1.html" width="1000px" height="900px"></iframe>
+      </div> -->
+      <div class="sketchfab-embed-wrapper">
+        <h4 class="title is-3">MPI-INF-3DHP</h4>
+        <p>
+          Results of our method on the <a href="https://paperswithcode.com/dataset/mpi-inf-3dhp">MPI</a> dataset, subject <b>S8</b>, and <b>Sequence 2</b>.
+        </p>
+        <iframe title="Mpi_bundle" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/c7cf89253cf34fc7bdd4b06b951fe24d/embed">
+        </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> 
+          <!-- <a href="https://sketchfab.com/3d-models/mpi-bundle-c7cf89253cf34fc7bdd4b06b951fe24d?utm_medium=embed&utm_campaign=share-popup&utm_content=c7cf89253cf34fc7bdd4b06b951fe24d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Bundle </a> by <a href="https://sketchfab.com/giorgos_al10?utm_medium=embed&utm_campaign=share-popup&utm_content=c7cf89253cf34fc7bdd4b06b951fe24d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> giorgos_al10 </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=c7cf89253cf34fc7bdd4b06b951fe24d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a> -->
+        </p>
+      </div>
+      <h4 class="title is-3">In the wild</h4>
+      <p>
+        Explore the dynamic movements and intricate details captured by our system, and delve into the possibilities that <span class="ours">BundleMoCap</span> opens for researchers and animators alike. 
+        The motion is captured by a multi-view system utilizing seven low-cost cameras for high-quality motion capture, revolutionizing the field with accessibility and efficiency.
+      </p>
+        <div class="sketchfab-embed-wrapper"> 
+          <iframe title="Kick" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/b9b68c3363684e8986cb2b38cd6d2cab/embed"> </iframe> 
+        </div>
+    </div>
+  </div>
+
+</section>
+<!--/ Results. -->
+<!-- Comparison. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- columns is-full-width -->
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <h3 class="title is-3">Comparison</h3>
+        <p>
+          <b>Comparison with different architectures.</b>
+          This video presents a comparative analysis of various multi-view fitting methods in the domain of motion capture.
+           Our study begins with a standard multi-view fitting as a baseline, then advances to explore more sophisticated techniques such as <a href="#MuVS">MuVS <b>[1]</b></a>,
+            <a href="#DCT">DCT <b>[2]</b></a>, 
+            <a href="#ETC">ETC <b>[3]</b></a>, 
+            <a href="#DMMR">DMMR <b>[4]</b></a>, 
+            and <a href="#SLAHMR">SLAHMR <b>[5]</b></a>.
+             We integrate data-driven priors like <a href="#VPoser">VPoser <b>[6]</b></a> and <a href="#HuMoR">HuMoR <b>[7]</b></a> to refine motion capture precision beyond traditional methods.
+        </p>
+        <video muted="" loop="" playsinline="" controls="" width="100%">
+          <source src="./static/videos/sitting_down.mp4" type="video/mp4">
+      </video>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!--/ Comparison. -->
+<!-- BibTeX. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-3">References</h2>
+        <ol>
+          <li>
+            <a href="https://ieeexplore.ieee.org/document/8374596" id="MuVS">
+            Yinghao Huang, Federica Bogo, Christoph Lassner, Angjoo Kanazawa, Peter V Gehler,
+            Javier Romero, Ijaz Akhter, and Michael J Black. 2017. Towards accurate markerless
+            human shape and pose estimation over time. In 2017 international conference on 3D
+            vision (3DV). IEEE, 421–430.
+          </a>
+          </li>
+          <li id="DCT">[Reference for DCT]</li>
+          <li id="ETC">[Reference for ETC]</li>
+          <li id="DMMR">[Reference for DMMR]</li>
+          <li id="SLAHMR">[Reference for SLAHMR]</li>
+          <li id="VPoser">[Reference for VPoser]</li>
+          <li id="HuMoR">[Reference for HuMoR]</li>
+        </ol>
       </div>
     </div>
   </div>
-  <div class="sketchfab-embed-wrapper">
-    <iframe title="Mpi_bundle" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c7cf89253cf34fc7bdd4b06b951fe24d/embed">
-    </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> 
-      <!-- <a href="https://sketchfab.com/3d-models/mpi-bundle-c7cf89253cf34fc7bdd4b06b951fe24d?utm_medium=embed&utm_campaign=share-popup&utm_content=c7cf89253cf34fc7bdd4b06b951fe24d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Bundle </a> by <a href="https://sketchfab.com/giorgos_al10?utm_medium=embed&utm_campaign=share-popup&utm_content=c7cf89253cf34fc7bdd4b06b951fe24d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> giorgos_al10 </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=c7cf89253cf34fc7bdd4b06b951fe24d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a> -->
-    </p>
-  </div>
 </section>
-<!--/ Results. -->
+<!--/ BibTeX. -->
+
 
 <section class="hero">
   <div class="hero-body">
